@@ -1,0 +1,35 @@
+<html>
+  <head>
+    <title> penguin's icebox </title>
+  </head>
+
+  <body>
+    <div id="index">
+    
+    </div>
+
+    <script>
+      const contents = {
+        'convex_hull': [
+          'outer_product',
+        ],
+      };
+
+      const url_base = 'C:/Users/W11107/Downloads/icebox-main/fragments/';
+      
+      const indexDiv = document.getElementById('index');
+      console.log(indexDiv);
+      
+      let innerHTML = '';
+      for (const section in contents) {
+        innerHTML += '<h3>' + section + '</h3>';
+        for (const i in contents[section]) {
+          const unit = contents[section][i];
+          innerHTML += '<a href="' + url_base + section + '/' + unit + '.html"' + '>' + unit + '</a>';
+        }
+      }
+
+      indexDiv.innerHTML = innerHTML;
+    </script>
+  </body>
+</html>
